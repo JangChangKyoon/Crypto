@@ -29,7 +29,11 @@ const Box = styled.div`
   animation: ${animation} 1s linear infinite;
   span {
     font-size: 36px;
+    &:hover {
+      font-size: 100px;
+    }
   }
+  // &:hover{} = span:hover{}
 `;
 
 function App() {
