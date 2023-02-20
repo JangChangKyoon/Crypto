@@ -32,6 +32,10 @@ const Box = styled.div`
     &:hover {
       font-size: 100px;
     }
+    &:active {
+      // 클릭하고 있는 상태
+      opacity: 0;
+    }
   }
   // &:hover{} = span:hover{}
 `;
