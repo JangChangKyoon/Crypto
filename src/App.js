@@ -23,6 +23,10 @@ const animation = keyframes`
     }
 `;
 
+const Emoji = styled.span`
+  font-size: 36px;
+`;
+
 const Box = styled.div`
   height: 200px;
   width: 200px;
@@ -31,25 +35,18 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   animation: ${animation} 1s linear infinite;
-  span {
-    font-size: 36px;
-    &:hover {
-      font-size: 100px;
-    }
-    &:active {
-      // 클릭하고 있는 상태
-      opacity: 0;
-    }
+  ${Emoji}:hover {
+    font-size: 100px;
   }
-  // &:hover{} = span:hover{}
 `;
 
 function App() {
   return (
     <Wrapper>
       <Box>
-        <span>👷👷👷👷</span>
+        <Emoji as="p">👷</Emoji>
       </Box>
+      <Emoji>👷</Emoji>
     </Wrapper>
   );
 }
