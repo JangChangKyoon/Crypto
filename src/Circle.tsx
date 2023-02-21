@@ -3,8 +3,13 @@ import React from "react";
 
 const Container = styled.div``;
 
-function Circle() {
-  return <Container />;
+interface CircleProps {
+  bgColor: string;
+}
+
+function Circle({ bgColor }: CircleProps) {
+  // = Circle({ bgColor }: CircleProps = props.bgColor : CircleProps
+  return <Container bgColor={bgColor} />;
 }
 
 export default Circle;
