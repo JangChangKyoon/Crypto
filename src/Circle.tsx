@@ -12,11 +12,7 @@ const Container = styled.div<ContainProps>`
   border-radius: 100px;
 `;
 
-interface CircleProps {
-  bgColor: string;
-}
-
-function Circle({ bgColor }: CircleProps) {
+function Circle({ bgColor }: ContainProps) {
   // = Circle({ bgColor }: CircleProps = props.bgColor : CircleProps
   return <Container bgColor={bgColor} />;
 }
