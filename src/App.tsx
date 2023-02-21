@@ -1,11 +1,22 @@
 import React from "react";
-import Circle from "./Circle";
+import { useState } from "react";
 
 function App() {
+  const [value, setValue] = useState("");
+  const onChange = (event: React.FormEvent<HTMLInputElement>) => {
+    console.log(event.currentTarget.value);
+  };
   return (
     <div>
-      <Circle borderColor="yellow" bgColor="teal" />
-      <Circle text="not default text" bgColor="tomato" />
+      <form>
+        <input
+          value={value}
+          onChange={onChange}
+          type="text"
+          placeholder="username"
+        />
+        <button>Log In</button>
+      </form>
     </div>
   );
 }
