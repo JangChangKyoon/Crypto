@@ -39,6 +39,8 @@ function Coin() {
   const { coinId } = useParams<RouteParams>();
   const { state } = useLocation<RouteState>();
   // console.log(state);
+  const [info, setInfo] = useState({});
+  const [priceInfo, setPriceInfo] = useState({});
   useEffect(() => {
     (async () => {
       const infoData = await (
@@ -48,7 +50,9 @@ function Coin() {
       const priceData = await (
         await fetch(`https://api.coinpaprika.com/v1/tickers/${coinId}`)
       ).json();
-      console.log(priceData);
+      // console.log(priceData);
+      setInfo(infoData);
+      setPriceInfo(priceData);
     })();
   }, []);
   return (
