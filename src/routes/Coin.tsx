@@ -1,6 +1,7 @@
 import { useLocation, useParams } from "react-router-dom";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
+import { stat } from "fs";
 
 const Title = styled.h1`
   font-size: 48px;
@@ -35,8 +36,9 @@ interface RouteState {
 
 function Coin() {
   const [loading, setLoading] = useState(true);
-  const { coinId } = useParams<RouteParams>();
+
   const { state } = useLocation<RouteState>();
+  // console.log(state);
   return (
     <Container>
       <Header>
