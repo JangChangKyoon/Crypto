@@ -1,8 +1,21 @@
 import React from "react";
+import { createGlobalStyle } from "styled-components";
 import Router from "./Router";
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    color: red
+  }
+
+`;
+
 function App() {
-  return <Router />;
+  return (
+    <>
+      <GlobalStyle />
+      <Router />
+    </>
+  );
 }
 
 export default App;
