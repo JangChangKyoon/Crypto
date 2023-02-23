@@ -49,6 +49,16 @@ interface CoinInterface {
 
 function Coins() {
   const [coins, setCoins] = useState<CoinInterface[]>([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    (async () => {
+      const response = await fetch("https://api.coinpaprika.com/v1/coins");
+      const json = await response.json();
+      setCoins(json.slice(0, 100)); // 100개까지만 불러옴
+      console.log(json);
+      setLoading(false);
+    })();
+  }, []);
   return (
     <Container>
       <Header>
