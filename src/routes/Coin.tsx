@@ -36,9 +36,21 @@ interface RouteState {
 
 function Coin() {
   const [loading, setLoading] = useState(true);
-
+  const { coinId } = useParams<RouteParams>();
   const { state } = useLocation<RouteState>();
   // console.log(state);
+  useEffect(() => {
+    (async () => {
+      const infoData = await (
+        await fetch(`https://api.coinpaprika.com/v1/coins/${coinId}`)
+      ).json();
+      console.log(infoData);
+      const priceData = await (
+        await fetch(`https://api.coinpaprika.com/v1/tickers/${coinId}`)
+      ).json();
+      console.log(priceData);
+    })();
+  }, []);
   return (
     <Container>
       <Header>
