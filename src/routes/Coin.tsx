@@ -193,9 +193,15 @@ function Coin({ isDark }: ICoinProps) {
         </title>
       </Helmet>
       <Header>
-        <Title>
-          {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
-        </Title>
+        <Link
+          to={{
+            pathname: `/`,
+          }}
+        >
+          <Title>
+            {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
+          </Title>
+        </Link>
       </Header>
       {loading ? (
         <Loader>Loading...</Loader>
