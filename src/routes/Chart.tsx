@@ -41,22 +41,22 @@ function Chart({ coinId }: ChartProps) {
               height: 300,
               width: 500,
               toolbar: {
-                show: false,
+                show: true,
               },
               background: "transparent",
             },
-            grid: { show: false },
+            grid: { show: true },
             stroke: {
               curve: "smooth",
               width: 4,
             },
             yaxis: {
-              show: false,
+              show: true,
             },
             xaxis: {
               axisBorder: { show: false },
-              axisTicks: { show: false },
-              labels: { show: false },
+              axisTicks: { show: true },
+              labels: { show: true },
             },
           }}
         />
