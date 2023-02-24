@@ -13,6 +13,7 @@ import Chart from "./Chart";
 import { fetchCoinInfo, fetchCoinTickers } from "../api";
 import { useQuery } from "react-query";
 import { Helmet } from "react-helmet";
+import React from "react";
 
 const Title = styled.h1`
   font-size: 48px;

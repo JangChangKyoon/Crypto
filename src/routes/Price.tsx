@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
 import styled from "styled-components";
 import { fetchCoinHistory } from "../api";
+import React from "react";
 
 interface IHistorical {
   time_open: string;

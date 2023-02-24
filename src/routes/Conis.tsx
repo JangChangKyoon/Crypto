@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { fetchCoins } from "../api";
 import { Helmet } from "react-helmet";
+import React from "react";
 
 const Container = styled.div`
   padding: 0px 20px;
